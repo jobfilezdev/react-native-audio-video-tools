@@ -39,8 +39,12 @@ class VideoTools extends Media {
             const cmd = [
                 "-i", `"${this.mediaFullPath}"`,
                 "-c:v", "libx264",
-                "-crf", result["-crf"],
-                "-preset", result["-preset"],
+                "-crf", "23",
+                "-preset", "ultrafast",
+                "-c:a", "aac",
+                "-b:a", "128k",
+                "-movflags", "+faststart",
+                "-vf", "scale=-2:720,format=yuv420p"
             ];
 
             // Add bitrate if present

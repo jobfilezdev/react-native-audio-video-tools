@@ -116,7 +116,7 @@ const getExtension = (path, type) => {
  */
 const getCompressionOptionsResolution = (quality, speed) => ({
     "-crf": quality === QUALITY.LOW ? '28' : quality === QUALITY.MEDIUM ? '23' : '18',
-    "-preset": speed === SPEED.SLOW ? 'veryslow' : speed === SPEED.NORMAL ? 'medium' : 'fast'
+    "-preset": speed === SPEED.SLOW ? 'veryslow' : speed === SPEED.NORMAL ? 'medium' : 'ultrafast'
 });
 
 /**
